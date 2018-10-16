@@ -3,10 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TasksRoutingModule } from './tasks-routing.module';
 import { TasksServicesModule } from './/tasks-services.module';
-import { 
-  TaskListComponent, 
-  TaskComponent, 
-} from './components';  
+import {
+  TaskListComponent,
+  TaskComponent,
+  TaskFormComponent,
+} from './components';
 
 @NgModule({
   imports: [
@@ -15,6 +16,10 @@ import {
     TasksRoutingModule,
     TasksServicesModule
   ],
-  declarations: [TaskListComponent, TaskComponent]
+  declarations: [
+    TaskListComponent,
+    TaskComponent,
+    TaskFormComponent,
+  ]
 })
 export class TasksModule { }

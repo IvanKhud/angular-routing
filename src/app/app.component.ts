@@ -5,12 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent { 
-  onActivate($event) {    
-    console.log('Activated Component', $event); 
-  } 
- 
-  onDeactivate($event) {   
-    console.log('Deactivated Component', $event); 
+export class AppComponent {
+  onActivate($event) {
+    console.log('Activated Component', $event);
+  }
+
+  onDeactivate($event) {
+    console.log('Deactivated Component', $event);
   }
 }
