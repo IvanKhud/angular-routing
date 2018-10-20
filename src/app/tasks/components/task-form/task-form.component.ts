@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 
 import { TaskModel } from './../../models/task.model';
@@ -15,6 +15,7 @@ export class TaskFormComponent implements OnInit {
   constructor(
     private taskArrayService: TaskArrayService,
     private route: ActivatedRoute,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -36,7 +37,11 @@ export class TaskFormComponent implements OnInit {
     } else {
       this.taskArrayService.createTask(task);
     }
+
+    this.onGoBack();
   }
 
-  onGoBack(): void {}
+  onGoBack(): void {
+    this.router.navigate(['/home']);
+  }
 }
